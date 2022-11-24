@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Monoton&family=Roboto:ital,wght@1,300&display=swap" rel="stylesheet">
+    <style>
+        .container {
+            width: 100%;
+        }
+
+        .logo-container {
+            width: 100%;
+            font-family: 'Roboto', sans-serif;
+            margin: 0.5rem 0.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo-container > .header {
+            font-family: 'Monoton', sans-serif;
+            font-size: 2.5rem;
+            color: darkslategray;
+            text-decoration: none;
+            letter-spacing: 0.25rem;
+        }
+
+        .logo-container > .header:hover {
+            color: gray;
+        }
+
+        .logo-container > .separator {
+            font-size: 2rem;
+            margin: 0rem 0.5rem;
+            color: darkslategray;
+        }
+
+        .subheader-container {
+            display: flex;
+        }
+
+        .subheader {
+            font-size: 1.25rem;
+            margin-right: 1rem;
+            color: darkslategray;
+            text-decoration: none;
+        }
+
+        .subheader:hover {
+            color: gray;
+        }
+
+        .image-gallery {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            list-style-type: none;
+        }
+
+        .image-gallery > li {
+            height: 30rem;
+            cursor: pointer;
+            position: relative;
+        }
+
+        .image-gallery li img {
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+            vertical-align: middle;
+            border-radius: 2px;
+        }
+    </style>
+    <title>Hello, world!</title>
+  </head>
+  <body>
+    <div class="container">
+        <div class="logo-container">
+            <a class="header" href="#">ELLIE JONES</a>
+            <div class="subheader-container">
+                <a class="subheader" href="#">PEOPLE</a>
+                <a class="subheader" href="#">PLACES</a>
+                <a class="subheader" href="#">SERVICES</a>
+                <a class="subheader" href="#">CONTACT</a>
+            </div>
+        </div>
+        <ul class="image-gallery" id="gallery">
+        </ul>
+    </div>
+  </body>
+  <script>
+    const imgUrlArr = [
+        "images/gas_pump.jpg",
+        "images/gas_station.jpg",
+        "images/glorias_bldg.jpg",
+        "images/glorias_landscape.jpg",
+        "images/glorias_large.jpg",
+        "images/glorias_zoom.jpg",
+        "images/gas.jpg",
+        "images/ballons1.jpg",
+        "images/ballons2.jpg",
+        "images/ballons3.jpg",
+        "images/farm1.jpg",
+        "images/farm2.jpg",
+        "images/farm3.jpg",
+        "images/farm4.jpg",
+        "images/lakelouise.jpg",
+        "images/lions.jpg",
+        "images/banff.jpg",
+        "images/banff2.jpg",
+        "images/giraffe.jpg",
+        "images/road.jpg",
+        "images/cayman.jpg",
+        "images/flowers.jpg",
+        "images/business.jpg",
+        "images/mail.jpg",
+        "images/window1.jpg",
+        "images/window2.jpg",
+        "images/car1.jpg",
+        "images/car2.jpg",
+        "images/gas1.jpg",
+        "images/peggys1.jpg",
+        "images/peggys2.jpg",
+        "images/c.jpg",
+        "images/c2.jpg",
+        "images/a.jpg",
+        "images/s.jpg",
+        "images/fsae1.jpg",
+        "images/fsae2.jpg",
+    ]
+    const gallery = document.getElementById("gallery")
+
+    function shuffleArray(array) {
+        for (var i = array.length - 1; i > 0; i--) {
+            var j = Math.floor(Math.random() * (i + 1));
+            var temp = array[i];
+            array[i] = array[j];
+            array[j] = temp;
+        }
+    }
+
+    shuffleArray(imgUrlArr)
+    
+    imgUrlArr.forEach(
+        function(item, i) {
+            var imgElement = document.createElement('img')
+            imgElement.src = item
+
+            var listItemElement = document.createElement('li')
+            listItemElement.appendChild(imgElement)
+
+            gallery.appendChild(listItemElement)
+        }
+    )
+  </script>
+</html>
