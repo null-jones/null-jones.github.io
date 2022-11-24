@@ -6,9 +6,46 @@
 
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
-
+        <link href="https://fonts.googleapis.com/css2?family=Monoton&family=Roboto:ital,wght@1,300&display=swap" rel="stylesheet">
         <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
         <title>Ellie Jones</title>
+
+        <style>
+            .ml3 {
+                font-size: 6.5em;
+                font-family: 'Monoton', sans-serif;
+                letter-spacing: 0.25rem;
+                color: darkslategray;
+            }
+            
+            .ml3-subheader {
+                font-size: 1.25em;
+                font-family: 'Roboto', sans-serif;
+                font-style: italic;
+                color: darkslategray;
+                opacity: 0;
+            }
+
+            .main-nav-container .vertical-line {
+                width: 2px !important;
+                height: 2.5em;
+                border-left: 2px solid darkslategray;
+                display: inline-block;
+                opacity: 0;
+            }
+
+            .main-nav-container .main-nav-item {
+                font-size: 2em;
+                font-family: 'Roboto', sans-serif;
+                text-decoration: none;
+                color: darkslategray;
+                opacity: 0;
+            }
+
+            .main-nav-container .main-nav-item:hover {
+                color: grey;
+            }
+        </style>
     </head>
     <body>
         <div class="container-fluid vh-100">
@@ -19,11 +56,59 @@
                 </div>
             </div>
             <div class="text-center position-absolute top-50 start-50 translate-middle">
-                <h2 class="display-3">Howdy!</h2>
-                <p class="text-muted">We'll be up shortly.  While you're waiting, you can check out my <a href="https://github.com/null-jones/">github</a>!</p>
+                <h1 class="ml3">Ellie Jones</h1>
+                <p class="ml3-subheader mb-4">Polyglot Data Scientist, Software Developer & Photographer</p>
+                <div class="main-nav-container d-flex align-items-center justify-content-center">
+                    <a class="main-nav-item mx-3 item-left" href="#">Code</a>
+                    <div class="vertical-line"></div>
+                    <a class="main-nav-item mx-3 item-right" href="photography/">Images</a>
+                </div>
             </div>
         </div>
 
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+        <script>
+            // Text animations courtesy of Tobias Ahlin
+            // https://tobiasahlin.com/moving-letters/
+
+            var textWrapper = document.querySelector('.ml3');
+            textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+
+            anime.timeline({loop: false})
+            .add({
+                targets: '.ml3 .letter',
+                opacity: [0, 1],
+                easing: "easeInQuad",
+                duration: 750,
+                delay: (el, i) => 150 * (i+1)
+            }).add({
+                targets: '.ml3-subheader',
+                opacity: [0, 1],
+                easing: "easeInQuad",
+                duration: 750,
+                offset: '-=500'
+            }).add({
+                targets: '.main-nav-container .vertical-line',
+                opacity: [0, 1],
+                height: [0, "3em"],
+                easing: "easeInQuad",
+                duration: 500,
+                offset: '-=500'
+            }).add({
+                targets: '.main-nav-container .item-left',
+                opacity: [0, 1],
+                translateX: ["0.5em", 0],
+                easing: "easeInQuad",
+                duration: 750,
+            }).add({
+                targets: '.main-nav-container .item-right',
+                opacity: [0, 1],
+                translateX: ["-0.5em", 0],
+                easing: "easeInQuad",
+                duration: 750,
+                offset: '-=750'
+            })
+        </script>
     </body>
 </html>
