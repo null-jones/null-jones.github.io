@@ -1,164 +1,89 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
+    <meta name="description" content="Photography by Ellie Jones">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Monoton&family=Roboto:ital,wght@1,300&display=swap" rel="stylesheet">
-    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
-    <style>
-        .container {
-            width: 100%;
-        }
-
-        .logo-container {
-            width: 100%;
-            font-family: 'Roboto', sans-serif;
-            margin: 0.5rem 0.5rem;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-
-        .logo-container > .header {
-            font-family: 'Monoton', sans-serif;
-            font-size: 2.5rem;
-            color: darkslategray;
-            text-decoration: none;
-            letter-spacing: 0.25rem;
-        }
-
-        .logo-container > .header:hover {
-            color: gray;
-        }
-
-        .logo-container > .separator {
-            font-size: 2rem;
-            margin: 0rem 0.5rem;
-            color: darkslategray;
-        }
-
-        .subheader-container {
-            display: flex;
-        }
-
-        .subheader {
-            font-size: 1.25rem;
-            margin-right: 1rem;
-            color: darkslategray;
-            text-decoration: none;
-        }
-
-        .subheader:hover {
-            color: gray;
-        }
-
-        .image-gallery {
-            display: flex;
-            flex-wrap: wrap;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-            list-style-type: none;
-        }
-
-        .image-gallery > li {
-            height: 30rem;
-            cursor: pointer;
-            position: relative;
-        }
-
-        .image-gallery li img {
-            object-fit: cover;
-            width: 100%;
-            height: 100%;
-            vertical-align: middle;
-            border-radius: 2px;
-        }
-    </style>
-    <title>Ellie Jones Photography</title>
-  </head>
-  <body>
-    <div class="container">
-        <div class="logo-container">
-            <a class="header" href="#">ELLIE JONES</a>
-            <div class="subheader-container">
-                <a class="subheader" href="#">PEOPLE</a>
-                <a class="subheader" href="#">PLACES</a>
-                <a class="subheader" href="#">SERVICES</a>
-                <a class="subheader" href="#">CONTACT</a>
-            </div>
-        </div>
-        <ul class="image-gallery" id="gallery">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Monoton&family=Michroma&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="icon" type="image/x-icon" href="../assets/favicon.ico">
+    <title>Photography — Ellie Jones</title>
+</head>
+<body>
+    <nav class="site-nav">
+        <a href="../" class="nav-logo">EJ</a>
+        <button class="nav-toggle" aria-label="Toggle navigation">
+            <span></span><span></span><span></span>
+        </button>
+        <ul class="nav-links">
+            <li><a href="../#projects">Projects</a></li>
+            <li><a href="../blog/">Blog</a></li>
+            <li><a href="./" class="active">Photography</a></li>
         </ul>
+    </nav>
+
+    <header class="gallery-header">
+        <h1 class="section-title">Photography</h1>
+        <hr class="section-rule" style="margin: 0.5rem auto 0;">
+    </header>
+
+    <div class="gallery" id="gallery">
     </div>
-  </body>
-  <script>
-    const imgUrlArr = [
-        "images/gas_pump.jpg",
-        "images/gas_station.jpg",
-        "images/glorias_bldg.jpg",
-        "images/glorias_landscape.jpg",
-        "images/glorias_large.jpg",
-        "images/glorias_zoom.jpg",
-        "images/gas.jpg",
-        "images/ballons1.jpg",
-        "images/ballons2.jpg",
-        "images/ballons3.jpg",
-        "images/farm1.jpg",
-        "images/farm2.jpg",
-        "images/farm3.jpg",
-        "images/farm4.jpg",
-        "images/lakelouise.jpg",
-        "images/lions.jpg",
-        "images/banff.jpg",
-        "images/banff2.jpg",
-        "images/giraffe.jpg",
-        "images/road.jpg",
-        "images/cayman.jpg",
-        "images/flowers.jpg",
-        "images/business.jpg",
-        "images/mail.jpg",
-        "images/window1.jpg",
-        "images/window2.jpg",
-        "images/car1.jpg",
-        "images/car2.jpg",
-        "images/gas1.jpg",
-        "images/peggys1.jpg",
-        "images/peggys2.jpg",
-        "images/c.jpg",
-        "images/c2.jpg",
-        "images/a.jpg",
-        "images/s.jpg",
-        "images/fsae1.jpg",
-        "images/fsae2.jpg",
-    ]
-    const gallery = document.getElementById("gallery")
 
-    function shuffleArray(array) {
-        for (var i = array.length - 1; i > 0; i--) {
-            var j = Math.floor(Math.random() * (i + 1));
-            var temp = array[i];
-            array[i] = array[j];
-            array[j] = temp;
+    <footer class="site-footer">
+        <div class="footer-socials">
+            <a href="https://github.com/null-jones/" aria-label="GitHub">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+            </a>
+            <a href="https://www.linkedin.com/in/elliejonesyyc/" aria-label="LinkedIn">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            </a>
+        </div>
+        <p class="footer-text">Ellie Jones &copy; 2025</p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+    <script src="../assets/js/main.js"></script>
+    <script>
+        var imgUrlArr = [
+            "images/gas_pump.jpg", "images/gas_station.jpg", "images/glorias_bldg.jpg",
+            "images/glorias_landscape.jpg", "images/glorias_large.jpg", "images/glorias_zoom.jpg",
+            "images/gas.jpg", "images/ballons1.jpg", "images/ballons2.jpg", "images/ballons3.jpg",
+            "images/farm1.jpg", "images/farm2.jpg", "images/farm3.jpg", "images/farm4.jpg",
+            "images/lakelouise.jpg", "images/lions.jpg", "images/banff.jpg", "images/banff2.jpg",
+            "images/giraffe.jpg", "images/road.jpg", "images/cayman.jpg", "images/flowers.jpg",
+            "images/business.jpg", "images/mail.jpg", "images/window1.jpg", "images/window2.jpg",
+            "images/car1.jpg", "images/car2.jpg", "images/gas1.jpg",
+            "images/peggys1.jpg", "images/peggys2.jpg",
+            "images/c.jpg", "images/c2.jpg", "images/a.jpg", "images/s.jpg",
+            "images/fsae1.jpg", "images/fsae2.jpg"
+        ];
+
+        var gallery = document.getElementById("gallery");
+
+        function shuffleArray(array) {
+            for (var i = array.length - 1; i > 0; i--) {
+                var j = Math.floor(Math.random() * (i + 1));
+                var temp = array[i];
+                array[i] = array[j];
+                array[j] = temp;
+            }
         }
-    }
 
-    shuffleArray(imgUrlArr)
-    
-    imgUrlArr.forEach(
-        function(item, i) {
-            var imgElement = document.createElement('img')
-            imgElement.src = item
+        shuffleArray(imgUrlArr);
 
-            var listItemElement = document.createElement('li')
-            listItemElement.appendChild(imgElement)
-
-            gallery.appendChild(listItemElement)
-        }
-    )
-  </script>
+        imgUrlArr.forEach(function(src) {
+            var div = document.createElement("div");
+            div.className = "gallery-item";
+            var img = document.createElement("img");
+            img.src = src;
+            img.alt = "Photography by Ellie Jones";
+            img.loading = "lazy";
+            div.appendChild(img);
+            gallery.appendChild(div);
+        });
+    </script>
+</body>
 </html>
