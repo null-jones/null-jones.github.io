@@ -1,23 +1,24 @@
 # Ellie Jones — elliej.dev
 
-> Director of Analytics at Wyvern. Data Scientist, Software Developer & Photographer based in Calgary, AB.
+> Director of Analytics at Wyvern. Geospatial data leader, data scientist and software developer based in Calgary, AB.
 
 ## About
 
-Ellie Jones leads analytics at Wyvern, a company building hyperspectral satellite imagery products. She works across data science, software development, geospatial analysis, and photography.
+Ellie Jones leads analytics at Wyvern, a company building hyperspectral satellite imagery products. She works across data science, software development, and geospatial analysis.
 
 ## Pages
 
 - [Home](https://elliej.dev/) — Portfolio landing page with featured projects and contour line visualizations
-- [Photography](https://elliej.dev/photography/) — Photography gallery featuring landscape, portrait, and documentary work
 - [Blog](https://elliej.dev/blog/) — Writing about geospatial data science, creative coding, and side projects
 
 ## Projects
 
+- [OpenSpecLib](https://github.com/null-jones/openspeclib) — Open file format for spectral libraries, a curated collection of public spectra, Python tooling, and a browser viewer
 - [streamlit-plotly-events](https://github.com/null-jones/streamlit-plotly-events) — Streamlit component that allows Plotly events to bubble back up to Streamlit
 - [awesome-hyperspectral](https://github.com/Nrevyw/awesome-hyperspectral) — Curated list of projects, papers, and tools for working with hyperspectral imagery
 - [wyvern-public-resources](https://github.com/Nrevyw/wyvern-public-resources) — Tutorials, examples, and tools for working with Wyvern Hyperspectral Data
 - [Contourist](https://github.com/null-jones/contourist) — Web-based topographic joy/ridgeline plot generator
+- [rpi-megalink-viewer](https://github.com/null-jones/rpi-megalink-viewer) — Per-firing-point score display for Megalink Live, runs on a Raspberry Pi Zero 2 W
 
 ## Links
 
